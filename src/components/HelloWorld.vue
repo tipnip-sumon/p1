@@ -1,10 +1,12 @@
 <script setup>
-import { ref } from 'vue'
+import { ref ,onUpdated} from 'vue'
 
 defineProps({
   msg: String,
 })
-
+onUpdated(() => {
+  console.log('Component updated')
+})
 const count = ref(0)
 </script>
 
